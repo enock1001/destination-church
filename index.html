@@ -388,13 +388,8 @@
     <div class="give-grid">
       <div class="give-card">
         <i class="fa-solid fa-hand-holding-dollar"></i>
-        <h3>Tithes</h3>
-        <p>Honoring God with the first of our increase.</p>
-      </div>
-      <div class="give-card">
-        <i class="fa-solid fa-gift"></i>
-        <h3>Offerings</h3>
-        <p>Cheerful giving toward the work of the ministry.</p>
+        <h3>Tithe &amp; Offering</h3>
+        <p>Honoring God with the first of our increase and cheerful giving toward the work of the ministry.</p>
       </div>
       <div class="give-card">
         <i class="fa-solid fa-earth-africa"></i>
@@ -403,7 +398,7 @@
       </div>
     </div>
 
-    <a href="#give" class="btn btn-gold give-btn">GIVE ONLINE <i class="fa-solid fa-chevron-right"></i></a>
+    <button type="button" class="btn btn-gold give-btn" id="giveOnlineBtn">GIVE ONLINE <i class="fa-solid fa-chevron-right"></i></button>
   </div>
 </section>
 
@@ -490,6 +485,69 @@
   <img src="" alt="" class="lightbox-img" id="lightboxImg">
   <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">&#8250;</button>
   <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- Giving Modal -->
+<div class="giving-modal" id="givingModal">
+  <div class="giving-modal-box">
+    <button class="giving-modal-close" id="givingModalClose" aria-label="Close">&times;</button>
+    <div class="giving-modal-header">
+      <span class="eyebrow">GIVING</span>
+      <h3>Our Year Of Absolute Abundance</h3>
+    </div>
+
+    <div class="giving-methods">
+      <div class="giving-method" data-copy="0595849548">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <div class="giving-method-info">
+          <span class="giving-method-label">MoMo Number</span>
+          <span class="giving-method-value">0595849548</span>
+        </div>
+        <button class="giving-copy-btn" aria-label="Copy MoMo number"><i class="fa-regular fa-copy"></i></button>
+      </div>
+
+      <div class="giving-method" data-copy="964190">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <div class="giving-method-info">
+          <span class="giving-method-label">MomoPay ID</span>
+          <span class="giving-method-value">964190</span>
+        </div>
+        <button class="giving-copy-btn" aria-label="Copy MomoPay ID"><i class="fa-regular fa-copy"></i></button>
+      </div>
+
+      <div class="giving-method" data-copy="1006000004715">
+        <i class="fa-solid fa-building-columns"></i>
+        <div class="giving-method-info">
+          <span class="giving-method-label">Access Bank — GHS</span>
+          <span class="giving-method-value">1006000004715</span>
+          <span class="giving-method-swift">Swift Code: ABNGGHAC</span>
+        </div>
+        <button class="giving-copy-btn" aria-label="Copy Access Bank GHS account number"><i class="fa-regular fa-copy"></i></button>
+      </div>
+
+      <div class="giving-method" data-copy="1006000004718">
+        <i class="fa-solid fa-building-columns"></i>
+        <div class="giving-method-info">
+          <span class="giving-method-label">Access Bank — USD</span>
+          <span class="giving-method-value">1006000004718</span>
+          <span class="giving-method-swift">Swift Code: ABNGGHAC</span>
+        </div>
+        <button class="giving-copy-btn" aria-label="Copy Access Bank USD account number"><i class="fa-regular fa-copy"></i></button>
+      </div>
+
+      <div class="giving-method" data-copy="1006000004719">
+        <i class="fa-solid fa-building-columns"></i>
+        <div class="giving-method-info">
+          <span class="giving-method-label">Access Bank — GBP</span>
+          <span class="giving-method-value">1006000004719</span>
+          <span class="giving-method-swift">Swift Code: ABNGGHAC</span>
+        </div>
+        <button class="giving-copy-btn" aria-label="Copy Access Bank GBP account number"><i class="fa-regular fa-copy"></i></button>
+      </div>
+    </div>
+
+    <p class="giving-modal-note">Account Name: Destination Church</p>
+  </div>
 </div>
 
 <script src="js/script.js"></script>

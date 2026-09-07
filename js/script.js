@@ -206,3 +206,49 @@ if (galleryItems.length && lightbox) {
     if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
   });
 }
+
+/* Giving Modal */
+const giveOnlineBtn = document.getElementById('giveOnlineBtn');
+const givingModal = document.getElementById('givingModal');
+
+if (giveOnlineBtn && givingModal) {
+  const givingModalClose = document.getElementById('givingModalClose');
+
+  const openGivingModal = () => {
+    givingModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeGivingModal = () => {
+    givingModal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  giveOnlineBtn.addEventListener('click', openGivingModal);
+  givingModalClose.addEventListener('click', closeGivingModal);
+
+  givingModal.addEventListener('click', (e) => {
+    if (e.target === givingModal) closeGivingModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (givingModal.classList.contains('open') && e.key === 'Escape') closeGivingModal();
+  });
+
+  givingModal.querySelectorAll('.giving-method').forEach(method => {
+    const copyBtn = method.querySelector('.giving-copy-btn');
+    const value = method.dataset.copy;
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(value).then(() => {
+        const icon = copyBtn.querySelector('i');
+        copyBtn.classList.add('copied');
+        icon.className = 'fa-solid fa-check';
+        setTimeout(() => {
+          copyBtn.classList.remove('copied');
+          icon.className = 'fa-regular fa-copy';
+        }, 1500);
+      });
+    });
+  });
+}
