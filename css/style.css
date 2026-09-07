@@ -523,6 +523,9 @@ button { font-family: inherit; }
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0.35s;
 }
 .gallery-item-tall { grid-row: span 2; }
 .gallery-item-wide { grid-column: span 2; }
@@ -532,15 +535,17 @@ button { font-family: inherit; }
   object-fit: cover;
   object-position: center 15%;
   display: block;
-  transition: transform 0.4s ease;
 }
 .gallery-item-wide img {
   object-position: center 22%;
   transform: scale(1.08);
   transform-origin: 46% 28%;
 }
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-item-wide:hover img { transform: scale(1.14); }
+.gallery-item:hover {
+  transform: scale(1.35);
+  z-index: 20;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
 
 /* Events */
 .events {
