@@ -83,11 +83,11 @@ if (sermonVideo) {
   };
 
   const playLatestSermon = () => {
-    sermonVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/${latest.videoId}?autoplay=1" title="Sermon video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    sermonVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/${latest.videoId}?autoplay=1&playsinline=1" title="Sermon video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   };
 
   const playLive = () => {
-    sermonVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${channelId}&autoplay=1" title="Live service" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    sermonVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${channelId}&autoplay=1&playsinline=1" title="Live service" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   };
 
   const isOnLatestTab = () => document.querySelector('.sermon-tab[data-tab="latest"]').classList.contains('active');
