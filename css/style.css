@@ -450,6 +450,7 @@ button { font-family: inherit; }
   inset: 0;
   background: rgba(0,0,0,0.35);
   transition: background 0.2s ease;
+  pointer-events: none;
 }
 .sermon-video:hover::after { background: rgba(0,0,0,0.5); }
 .sermon-play {
