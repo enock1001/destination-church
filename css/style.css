@@ -741,6 +741,34 @@ button { font-family: inherit; }
   text-align: center;
   letter-spacing: 0.2px;
 }
+.access-badge {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.access-badge-icon {
+  width: 14px;
+  height: 14px;
+  background: #f47b20;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.access-badge-text {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.6rem;
+  color: #002d5c;
+  letter-spacing: 0.2px;
+}
 .giving-method-info {
   display: flex;
   flex-direction: column;
