@@ -708,6 +708,39 @@ button { font-family: inherit; }
   text-align: center;
   flex-shrink: 0;
 }
+.momo-badge {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: #ffcc00;
+  border: 1px solid #e6b800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 2px;
+}
+.momo-badge-mtn {
+  background: #003876;
+  color: #ffcc00;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 0.62rem;
+  letter-spacing: 0.5px;
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+.momo-badge-label {
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  font-size: 0.4rem;
+  line-height: 1.15;
+  color: #003876;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
 .giving-method-info {
   display: flex;
   flex-direction: column;
