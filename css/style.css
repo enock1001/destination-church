@@ -159,7 +159,7 @@ button { font-family: inherit; }
   position: relative;
   background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 35%;
   color: var(--white);
   padding: 100px 0 120px;
   overflow: hidden;
