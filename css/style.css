@@ -649,7 +649,7 @@ button { font-family: inherit; }
   inset: 0;
   background: url('../images/logo.png') no-repeat center center;
   background-size: 380px;
-  opacity: 0.1;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 0;
 }
