@@ -149,3 +149,60 @@ if (sermonVideo) {
       // Silently keep the fallback sermon set in the HTML
     });
 }
+
+/* Gallery Lightbox */
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+
+if (galleryItems.length && lightbox) {
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  const photos = Array.from(galleryItems).map(item => {
+    const img = item.querySelector('img');
+    return { src: img.src, alt: img.alt };
+  });
+
+  let currentIndex = 0;
+
+  const showPhoto = (index) => {
+    currentIndex = (index + photos.length) % photos.length;
+    const photo = photos[currentIndex];
+    lightboxImg.src = photo.src;
+    lightboxImg.alt = photo.alt;
+    lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
+  };
+
+  const openLightbox = (index) => {
+    showPhoto(index);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', () => showPhoto(currentIndex - 1));
+  lightboxNext.addEventListener('click', () => showPhoto(currentIndex + 1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+    if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+  });
+}
