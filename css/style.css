@@ -1048,6 +1048,7 @@ button { font-family: inherit; }
 @media (max-width: 768px) {
   .topbar-inner { justify-content: center; text-align: center; }
   .topbar-location { display: none; }
+  .hero { background-size: auto 145%; background-position: center 3%; }
   .lightbox-prev, .lightbox-next { width: 42px; height: 42px; font-size: 1.2rem; }
   .lightbox-prev { left: 10px; }
   .lightbox-next { right: 10px; }
