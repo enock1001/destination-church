@@ -525,7 +525,6 @@ button { font-family: inherit; }
   position: relative;
   z-index: 1;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0.35s;
 }
 .gallery-item-tall { grid-row: span 2; }
 .gallery-item-wide { grid-column: span 2; }
@@ -541,10 +540,37 @@ button { font-family: inherit; }
   transform: scale(1.08);
   transform-origin: 46% 28%;
 }
+
+/* On hover, pop out and show the complete, uncropped photo */
 .gallery-item:hover {
-  transform: scale(1.35);
-  z-index: 20;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  z-index: 999;
+  border-radius: var(--radius);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  background: var(--navy);
+}
+.gallery-item:hover::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
+}
+.gallery-item:hover img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
 }
 
 /* Events */
