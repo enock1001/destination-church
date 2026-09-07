@@ -158,8 +158,10 @@ button { font-family: inherit; }
 .hero {
   position: relative;
   background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center 75%;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: var(--navy);
   color: var(--white);
   padding: 100px 0 120px;
   overflow: hidden;
@@ -1048,7 +1050,6 @@ button { font-family: inherit; }
 @media (max-width: 768px) {
   .topbar-inner { justify-content: center; text-align: center; }
   .topbar-location { display: none; }
-  .hero { background-size: auto 145%; background-position: center 3%; }
   .lightbox-prev, .lightbox-next { width: 42px; height: 42px; font-size: 1.2rem; }
   .lightbox-prev { left: 10px; }
   .lightbox-next { right: 10px; }
