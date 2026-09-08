@@ -295,9 +295,7 @@ button { font-family: inherit; }
   align-items: center;
 }
 .welcome-img {
-  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 .welcome-photo {
   width: 100%;
@@ -330,9 +328,6 @@ button { font-family: inherit; }
 }
 .services-flyer img {
   width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.1);
   display: block;
 }
 .services-grid {
@@ -387,9 +382,6 @@ button { font-family: inherit; }
 .new-here-art img {
   width: 100%;
   max-width: 320px;
-  border-radius: var(--radius);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-  border: 1px solid rgba(0,0,0,0.08);
   display: block;
 }
 
@@ -543,7 +535,6 @@ button { font-family: inherit; }
   margin: 0 auto;
 }
 .gallery-item {
-  border-radius: var(--radius);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -564,9 +555,6 @@ button { font-family: inherit; }
   object-position: center 22%;
   transform: scale(1.08);
   transform-origin: 46% 28%;
-}
-.gallery-item:hover {
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 .gallery-item:hover img {
   transform: scale(1.08);
@@ -961,9 +949,7 @@ button { font-family: inherit; }
 .visit-list i { color: var(--gold-dark); width: 20px; }
 .visit-info h2 { font-size: 2.1rem; color: var(--navy); margin-top: 4px; }
 .visit-map {
-  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
   min-height: 320px;
 }
 
