@@ -681,6 +681,25 @@ button { font-family: inherit; }
 .ministry-nav .next { text-align: right; align-items: flex-end; margin-left: auto; }
 
 /* Annual Programs */
+.programs-section {
+  position: relative;
+  overflow: hidden;
+}
+.programs-bg-icon {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 480px;
+  color: #eef1f1;
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+.programs-section > .container {
+  position: relative;
+  z-index: 1;
+}
 .programs-intro {
   max-width: 700px;
   margin: 0 auto 40px;
@@ -719,6 +738,7 @@ button { font-family: inherit; }
 }
 @media (max-width: 480px) {
   .programs-group { flex-direction: column; gap: 8px; }
+  .programs-bg-icon { font-size: 240px; top: 20px; }
 }
 
 /* Gallery */
