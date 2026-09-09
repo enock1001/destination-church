@@ -576,6 +576,13 @@ button { font-family: inherit; }
   margin-bottom: 24px;
   display: inline-block;
 }
+.ministry-detail-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 30px;
+}
 .ministry-detail-inner p {
   font-size: 1.05rem;
   color: var(--text-gray);
