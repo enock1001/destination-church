@@ -15,7 +15,7 @@ backToTop.addEventListener('click', () => {
 });
 
 /* Reveal photo when scrolled into view */
-const revealEls = document.querySelectorAll('.reveal-slide, .reveal-fade-up');
+const revealEls = document.querySelectorAll('.reveal-slide, .reveal-fade-up, .reveal-slide-lr');
 if (revealEls.length) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
