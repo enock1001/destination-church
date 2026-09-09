@@ -687,18 +687,15 @@ button { font-family: inherit; }
 }
 .programs-bg-icon {
   position: absolute;
+  top: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 340px;
+  transform: translateX(-50%);
+  font-size: 480px;
   color: #eef1f1;
   z-index: 0;
   pointer-events: none;
   line-height: 1;
 }
-.programs-bg-icon-1 { top: 12%; }
-.programs-bg-icon-2 { top: 37%; }
-.programs-bg-icon-3 { top: 62%; }
-.programs-bg-icon-4 { top: 87%; }
 .programs-section > .container {
   position: relative;
   z-index: 1;
@@ -739,23 +736,9 @@ button { font-family: inherit; }
   font-size: 1rem;
   padding: 5px 0;
 }
-.programs-items li.programs-empty {
-  font-weight: 500;
-  color: #bbb;
-  text-transform: none;
-  font-style: italic;
-}
-.programs-note {
-  max-width: 700px;
-  margin: 34px auto 0;
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 0.85rem;
-  font-style: italic;
-}
 @media (max-width: 480px) {
   .programs-group { flex-direction: column; gap: 8px; }
-  .programs-bg-icon { font-size: 180px; }
+  .programs-bg-icon { font-size: 240px; top: 20px; }
 }
 
 /* Gallery */
