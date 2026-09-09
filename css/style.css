@@ -680,6 +680,47 @@ button { font-family: inherit; }
 }
 .ministry-nav .next { text-align: right; align-items: flex-end; margin-left: auto; }
 
+/* Annual Programs */
+.programs-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+.programs-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.programs-group {
+  display: flex;
+  gap: 30px;
+  padding: 26px 0;
+  border-bottom: 1px solid #eee;
+}
+.programs-group:last-child { border-bottom: none; }
+.programs-month {
+  min-width: 110px;
+  flex-shrink: 0;
+  font-weight: 800;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding-top: 3px;
+}
+.programs-items { flex: 1; }
+.programs-items li {
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+@media (max-width: 480px) {
+  .programs-group { flex-direction: column; gap: 8px; }
+}
+
 /* Gallery */
 .gallery {
   background: var(--white);
@@ -978,33 +1019,26 @@ button { font-family: inherit; }
   background: var(--navy);
   padding: 90px 0;
 }
-.event-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-bottom: 40px;
-}
-.event-card {
-  border-top: 1px solid rgba(255,255,255,0.15);
+.event-single {
   display: flex;
-  color: var(--white);
-}
-.event-date {
-  background: var(--gold);
-  color: var(--navy);
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  min-width: 90px;
-  text-align: center;
+  gap: 26px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-top: 3px solid var(--gold);
+  color: var(--white);
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
-.event-day { font-size: 1.5rem; font-weight: 900; }
-.event-month { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; }
-.event-body { padding: 20px; }
-.event-body h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
-.event-body p { font-size: 0.85rem; color: #b3b8b8; }
+.event-single:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.event-single-icon i { font-size: 2rem; color: var(--gold); }
+.event-single-body h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+.event-single-body p { font-size: 0.85rem; color: #b3b8b8; }
+.event-single-arrow { margin-left: auto; color: var(--gold); font-size: 1.2rem; flex-shrink: 0; }
 .events-cta { text-align: center; }
 
 /* Prayer */
@@ -1200,7 +1234,8 @@ button { font-family: inherit; }
   .gallery-grid { grid-auto-rows: 180px; }
   .services-layout { grid-template-columns: 1fr; }
   .services-flyer { max-width: 280px; margin: 0 auto; }
-  .event-grid { grid-template-columns: 1fr; }
+  .event-single { flex-direction: column; text-align: center; }
+  .event-single-arrow { margin-left: 0; }
   .give-grid { grid-template-columns: 1fr; }
   .giving-modal-box { padding: 32px 20px 24px; }
   .giving-method { flex-wrap: wrap; }
