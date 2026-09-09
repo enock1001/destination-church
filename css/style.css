@@ -379,6 +379,18 @@ button { font-family: inherit; }
   align-items: center;
   justify-content: center;
 }
+.reveal-slide {
+  opacity: 0;
+  transform: translateX(70px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-slide.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-slide { opacity: 1; transform: none; transition: none; }
+}
 .new-here-art img {
   width: 100%;
   max-width: 320px;

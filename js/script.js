@@ -14,6 +14,20 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+/* Slide-in reveal on scroll */
+const revealEls = document.querySelectorAll('.reveal-slide');
+if (revealEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.25 });
+  revealEls.forEach(el => revealObserver.observe(el));
+}
+
 const navLinks = document.querySelectorAll('.nav a');
 const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
 
