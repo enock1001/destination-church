@@ -15,7 +15,7 @@ backToTop.addEventListener('click', () => {
 });
 
 /* Slide-in reveal when scrolled into view */
-const revealEls = document.querySelectorAll('.reveal-slide');
+const revealEls = document.querySelectorAll('.reveal-slide, .reveal-fade-up');
 if (revealEls.length) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
