@@ -504,11 +504,11 @@ button { font-family: inherit; }
 }
 .ministry-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 30px;
 }
 .ministry-card {
-  padding: 20px 10px;
+  padding: 20px 14px;
   text-align: center;
   border-top: 3px solid transparent;
   transition: border-color 0.25s ease, transform 0.25s ease;
@@ -518,7 +518,8 @@ button { font-family: inherit; }
   transform: translateY(-4px);
 }
 .ministry-card i { font-size: 2rem; color: var(--gold-dark); margin-bottom: 14px; }
-.ministry-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); font-family: 'Poppins', sans-serif; }
+.ministry-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); font-family: 'Poppins', sans-serif; margin-bottom: 8px; }
+.ministry-card p { font-size: 0.85rem; color: var(--text-gray); text-transform: none; letter-spacing: normal; font-weight: 400; }
 
 /* Gallery */
 .gallery {
