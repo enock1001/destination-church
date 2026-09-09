@@ -687,15 +687,18 @@ button { font-family: inherit; }
 }
 .programs-bg-icon {
   position: absolute;
-  top: 40px;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 480px;
+  transform: translate(-50%, -50%);
+  font-size: 340px;
   color: #eef1f1;
   z-index: 0;
   pointer-events: none;
   line-height: 1;
 }
+.programs-bg-icon-1 { top: 12%; }
+.programs-bg-icon-2 { top: 37%; }
+.programs-bg-icon-3 { top: 62%; }
+.programs-bg-icon-4 { top: 87%; }
 .programs-section > .container {
   position: relative;
   z-index: 1;
@@ -752,7 +755,7 @@ button { font-family: inherit; }
 }
 @media (max-width: 480px) {
   .programs-group { flex-direction: column; gap: 8px; }
-  .programs-bg-icon { font-size: 240px; top: 20px; }
+  .programs-bg-icon { font-size: 180px; }
 }
 
 /* Gallery */
