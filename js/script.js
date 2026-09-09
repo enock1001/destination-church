@@ -14,18 +14,14 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* Slide-in reveal on scroll */
+/* Slide-in reveal on page load */
 const revealEls = document.querySelectorAll('.reveal-slide');
 if (revealEls.length) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.25 });
-  revealEls.forEach(el => revealObserver.observe(el));
+  window.requestAnimationFrame(() => {
+    setTimeout(() => {
+      revealEls.forEach(el => el.classList.add('in-view'));
+    }, 300);
+  });
 }
 
 const navLinks = document.querySelectorAll('.nav a');
