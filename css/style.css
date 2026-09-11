@@ -313,6 +313,57 @@ button { font-family: inherit; }
   margin-bottom: 24px !important;
 }
 
+/* Mission Statement */
+.mission-band {
+  background: var(--white);
+  padding: 70px 0;
+  text-align: center;
+}
+.mission-band h2 {
+  font-size: 2.2rem;
+  color: var(--navy);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.25;
+}
+.mission-band-sub {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+/* Purpose For Everyone */
+.everyone {
+  background: var(--cream);
+  padding: 90px 0;
+}
+.everyone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.everyone-card {
+  display: block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 44px 30px;
+  text-align: center;
+  border-top: 3px solid transparent;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.everyone-card:hover {
+  border-top-color: var(--gold);
+  transform: translateY(-4px);
+}
+.everyone-card i { font-size: 2.4rem; color: var(--gold); margin-bottom: 18px; }
+.everyone-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.everyone-card p { font-size: 0.85rem; color: #b3b8b8; margin-bottom: 14px; }
+
 /* Weekly Services */
 .services {
   background: var(--navy);
@@ -551,7 +602,8 @@ button { font-family: inherit; }
 }
 .ministry-card i { font-size: 2.2rem; color: var(--gold-dark); margin-bottom: 16px; }
 .ministry-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); font-family: 'Poppins', sans-serif; }
-.ministry-card span.ministry-more {
+.ministry-card span.ministry-more,
+.everyone-card span.ministry-more {
   display: block;
   margin-top: 8px;
   font-size: 0.72rem;
@@ -560,6 +612,7 @@ button { font-family: inherit; }
   color: var(--gold-dark);
   text-transform: uppercase;
 }
+.everyone-card span.ministry-more { color: var(--gold); }
 
 /* Ministry detail page */
 .page-hero {
@@ -1019,27 +1072,26 @@ button { font-family: inherit; }
   background: var(--navy);
   padding: 90px 0;
 }
-.event-single {
-  display: flex;
-  align-items: center;
+.take-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  padding: 34px;
+}
+.take-card {
+  display: block;
+  padding: 34px 28px;
   border: 1px solid rgba(255,255,255,0.15);
   border-top: 3px solid var(--gold);
   color: var(--white);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
-.event-single:hover {
+.take-card:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
 }
-.event-single-icon i { font-size: 2rem; color: var(--gold); }
-.event-single-body h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
-.event-single-body p { font-size: 0.85rem; color: #b3b8b8; }
-.event-single-arrow { margin-left: auto; color: var(--gold); font-size: 1.2rem; flex-shrink: 0; }
-.events-cta { text-align: center; }
+.take-card i { font-size: 2rem; color: var(--gold); margin-bottom: 16px; display: block; }
+.take-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+.take-card p { font-size: 0.85rem; color: #b3b8b8; }
 
 /* Prayer */
 .prayer {
@@ -1234,8 +1286,8 @@ button { font-family: inherit; }
   .gallery-grid { grid-auto-rows: 180px; }
   .services-layout { grid-template-columns: 1fr; }
   .services-flyer { max-width: 280px; margin: 0 auto; }
-  .event-single { flex-direction: column; text-align: center; }
-  .event-single-arrow { margin-left: 0; }
+  .take-grid { grid-template-columns: 1fr; }
+  .everyone-grid { grid-template-columns: 1fr; }
   .give-grid { grid-template-columns: 1fr; }
   .giving-modal-box { padding: 32px 20px 24px; }
   .giving-method { flex-wrap: wrap; }
