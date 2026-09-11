@@ -277,6 +277,61 @@ button { font-family: inherit; }
 }
 .heading-divider.small.center { margin-left: auto; margin-right: auto; }
 
+/* About Page */
+.about-hero {
+  position: relative;
+  height: 440px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.65)), url('../images/welcome-pastor.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+.about-hero h1 { color: var(--white); font-size: 3.2rem; }
+.why-exist {
+  background: var(--white);
+  padding: 70px 0 0;
+}
+.why-exist-box {
+  background: var(--navy);
+  color: var(--white);
+  padding: 60px;
+  max-width: 900px;
+  margin: -110px auto 0;
+  position: relative;
+  z-index: 2;
+}
+.why-exist-box .eyebrow { color: var(--gold); }
+.why-exist-box h2 { font-size: 2rem; margin-top: 16px; line-height: 1.3; }
+.about-intro {
+  background: var(--white);
+  padding: 70px 0;
+}
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-intro-grid p { color: var(--text-gray); font-size: 1rem; line-height: 1.8; }
+.purpose-grid-section {
+  background: var(--navy);
+  padding: 90px 0;
+}
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.purpose-card {
+  background: var(--white);
+  padding: 44px 40px;
+}
+.purpose-card h3 { font-size: 1.6rem; color: var(--navy); margin-bottom: 16px; }
+.purpose-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.75; margin-bottom: 24px; }
+
 /* Welcome */
 .welcome {
   background: var(--white);
@@ -1269,6 +1324,12 @@ button { font-family: inherit; }
 /* Responsive */
 @media (max-width: 992px) {
   .hero h1 { font-size: 3rem; }
+  .about-hero { height: 340px; }
+  .about-hero h1 { font-size: 2.4rem; }
+  .why-exist-box { padding: 40px 30px; margin-top: -70px; }
+  .why-exist-box h2 { font-size: 1.6rem; }
+  .about-intro-grid { grid-template-columns: 1fr; gap: 24px; }
+  .purpose-grid { grid-template-columns: 1fr; }
   .ministry-detail-split { grid-template-columns: 1fr; text-align: center; }
   .ministry-detail-split-img { max-height: 380px; }
   .welcome-inner { grid-template-columns: 1fr; }
