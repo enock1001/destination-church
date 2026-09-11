@@ -1,12 +1,12 @@
 const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+const moreMenu = document.getElementById('moreMenu');
 
 hamburger.addEventListener('click', () => {
-  nav.classList.toggle('open');
+  moreMenu.classList.toggle('open');
 });
 
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+moreMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => moreMenu.classList.remove('open'));
 });
 
 const backToTop = document.getElementById('backToTop');

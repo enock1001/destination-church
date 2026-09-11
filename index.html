@@ -27,7 +27,7 @@
 <link rel="icon" type="image/png" href="images/logo-original.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/style.css?v=22">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,25 +56,6 @@
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div class="topbar-left">
-      <span><i class="fa-solid fa-clock"></i> Elevation Service: Sun 8:30 AM</span>
-      <span><i class="fa-solid fa-clock"></i> Transformation Service: Fri 7:00 PM</span>
-      <span class="topbar-location"><i class="fa-solid fa-location-dot"></i> Change Arena, Community 9, Tema</span>
-    </div>
-    <div class="topbar-right">
-      <a href="tel:+233595849548"><i class="fa-solid fa-phone"></i> +233 59 584 9548</a>
-      <a href="https://wa.me/233595849548" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.tiktok.com/@destinationchurch1?_r=1&_t=ZP-99WkLDfuyVy" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://www.instagram.com/destination_church?stkn=dHR6bGFnNGd0enI=" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.youtube.com/results?search_query=prophet+david+kyei" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-  </div>
-</div>
-
 <!-- Header -->
 <header class="header">
   <div class="container header-inner">
@@ -83,44 +64,59 @@
     </a>
 
     <nav class="nav" id="nav">
-      <a href="#home" class="active">HOME</a>
-      <a href="about.html">ABOUT US</a>
-      <a href="#ministries">MINISTRIES</a>
-      <a href="#sermons">SERMONS</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#events">EVENTS</a>
-      <a href="#give">GIVE</a>
-      <a href="#prayer">PRAYER REQUEST</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#home" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="#ministries">Ministries</a>
+      <a href="#sermons">Sermons</a>
+      <a href="#give">Give</a>
     </nav>
 
-    <a href="#visit" class="btn btn-gold btn-order">PLAN YOUR VISIT</a>
-
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-right">
+      <div class="header-social">
+        <a href="https://www.instagram.com/destination_church?stkn=dHR6bGFnNGd0enI=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@destinationchurch1?_r=1&_t=ZP-99WkLDfuyVy" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/results?search_query=prophet+david+kyei" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
+<!-- More Menu -->
+<div class="more-menu" id="moreMenu">
+  <div class="container more-menu-inner">
+    <nav class="more-menu-links">
+      <a href="#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="#ministries">Ministries</a>
+      <a href="#sermons">Sermons</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#events">Events</a>
+      <a href="#give">Give</a>
+      <a href="#prayer">Prayer Request</a>
+      <a href="#visit">Plan Your Visit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="more-menu-info">
+      <p><i class="fa-solid fa-clock"></i> Elevation Service — Sun 8:30 AM</p>
+      <p><i class="fa-solid fa-clock"></i> Transformation Service — Fri 7:00 PM</p>
+      <p><a href="tel:+233595849548"><i class="fa-solid fa-phone"></i> +233 59 584 9548</a></p>
+      <p><a href="https://wa.me/233595849548" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></p>
+      <p><i class="fa-solid fa-location-dot"></i> Change Arena, Community 9, Tema</p>
+    </div>
+  </div>
+</div>
+
 <!-- Hero -->
 <section class="hero" id="home">
-  <div class="hero-overlay"></div>
-  <div class="container hero-inner">
-    <div class="hero-info">
-      <h1>Shaping Destinies,<br>Transforming Lives</h1>
-      <div class="hero-divider"></div>
-      <p>Real People. Real Word. Real Transformation.</p>
-    </div>
-
-    <div class="hero-actions">
-      <div class="hero-times">
-        <div class="hero-time"><i class="fa-solid fa-sun"></i> Elevation Service — Sun 8:30 AM – 11:00 AM</div>
-        <div class="hero-time"><i class="fa-solid fa-fire"></i> Transformation Service — Fri 7:00 PM – 10:00 PM</div>
-      </div>
-
-      <div class="hero-btns">
-        <a href="#visit" class="btn btn-gold">PLAN YOUR VISIT</a>
-        <a href="#sermons" class="btn btn-outline"><i class="fa-solid fa-play"></i> WATCH ONLINE</a>
+  <div class="container">
+    <div class="hero-media">
+      <div class="hero-content">
+        <h1>Shaping Destinies,<br>Transforming Lives</h1>
+        <p class="hero-sub">Real People. Real Word. Real Transformation.</p>
+        <a href="#visit" class="btn btn-gold">Plan Your Visit</a>
       </div>
     </div>
   </div>
@@ -598,6 +594,6 @@
   </div>
 </div>
 
-<script src="js/script.js?v=7"></script>
+<script src="js/script.js?v=8"></script>
 </body>
 </html>
