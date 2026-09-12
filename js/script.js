@@ -52,6 +52,22 @@ if (heroSlides.length) {
   }, 6000);
 }
 
+/* Welcome section slideshow: each photo fades up into view */
+const welcomeSlides = document.querySelectorAll('.welcome-slide');
+if (welcomeSlides.length) {
+  let welcomeIndex = 0;
+  let welcomeZ = 1;
+  welcomeSlides[0].style.zIndex = welcomeZ;
+  welcomeSlides[0].classList.add('active');
+  setInterval(() => {
+    welcomeSlides[welcomeIndex].classList.remove('active');
+    welcomeIndex = (welcomeIndex + 1) % welcomeSlides.length;
+    welcomeZ += 1;
+    welcomeSlides[welcomeIndex].style.zIndex = welcomeZ;
+    welcomeSlides[welcomeIndex].classList.add('active');
+  }, 5000);
+}
+
 /* Slide-in reveal when scrolled into view */
 const revealEls = document.querySelectorAll('.reveal-slide, .reveal-fade-up, .reveal-slide-lr');
 if (revealEls.length) {
