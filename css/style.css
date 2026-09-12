@@ -1350,7 +1350,7 @@ button { font-family: inherit; }
 .back-to-top:hover { background: var(--gold-dark); transform: translateY(-3px); }
 
 /* Responsive */
-@media (max-width: 1700px) {
+@media (max-width: 1900px) {
   .hero-media { min-height: 460px; }
   .hero h1 { font-size: 1.7rem; max-width: 200px; }
   .hero-sub { font-size: 1.7rem; max-width: 240px; }
@@ -1361,9 +1361,9 @@ button { font-family: inherit; }
   .hero-sub { font-size: 1.4rem; max-width: 200px; }
 }
 @media (max-width: 992px) {
-  .hero-media { min-height: 280px; }
+  .hero-media { min-height: 230px; }
   .hero h1 { font-size: 1.1rem; max-width: 115px; }
-  .hero-sub { font-size: 1.1rem; max-width: 160px; }
+  .hero-sub { font-size: 1.1rem; max-width: 140px; }
   .about-hero { height: 340px; }
   .about-hero h1 { font-size: 2.4rem; }
   .why-exist-box { padding: 40px 30px; margin-top: -70px; }
