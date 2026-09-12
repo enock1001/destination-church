@@ -1202,7 +1202,7 @@ button { font-family: inherit; }
 .give-card i { font-size: 2.2rem; color: var(--gold-dark); margin-bottom: 16px; }
 .give-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
 .give-card p { font-size: 0.85rem; color: var(--text-gray); }
-.give-btn { padding: 16px 40px; font-size: 0.95rem; }
+.give-btn { padding: 16px 40px; font-size: 0.95rem; border-radius: 50px; }
 
 /* Visit */
 .visit {
