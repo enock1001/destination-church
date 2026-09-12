@@ -266,7 +266,7 @@ button { font-family: inherit; }
 .about-hero h1 {
   color: var(--white);
   font-size: 3.2rem;
-  animation: dropIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: dropIn 2.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .why-exist {
   background: var(--white);
@@ -280,10 +280,10 @@ button { font-family: inherit; }
   margin: -110px auto 0;
   position: relative;
   z-index: 2;
-  animation: dropIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+  animation: dropIn 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
 @keyframes dropIn {
-  from { opacity: 0; transform: translateY(-50px); }
+  from { opacity: 0; transform: translateY(-100vh); }
   to { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
