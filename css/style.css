@@ -214,6 +214,8 @@ button { font-family: inherit; }
   filter: blur(0px);
 }
 .hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
