@@ -192,12 +192,10 @@ button { font-family: inherit; }
 /* Hero */
 .hero {
   background: var(--white);
-  padding: 40px 0;
 }
 .hero-media {
   position: relative;
   min-height: 620px;
-  border-radius: 6px;
   overflow: hidden;
   background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.25)), url('../images/hero-bg.jpg');
   background-size: contain;
@@ -206,7 +204,7 @@ button { font-family: inherit; }
   background-color: #000;
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 60px 0;
   color: var(--white);
 }
 .hero-content { max-width: 620px; }
@@ -1364,7 +1362,7 @@ button { font-family: inherit; }
   .lightbox-prev { left: 10px; }
   .lightbox-next { right: 10px; }
   .lightbox-close { top: 14px; right: 14px; width: 38px; height: 38px; font-size: 1.1rem; }
-  .hero-media { min-height: 460px; padding: 34px; }
+  .hero-media { min-height: 460px; padding: 34px 0; }
   .hero h1 { font-size: 2.1rem; }
   .hero-sub { font-size: 1.05rem; margin: 14px 0 24px; }
   .services-grid { grid-template-columns: 1fr; }
