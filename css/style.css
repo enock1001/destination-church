@@ -221,6 +221,25 @@ button { font-family: inherit; }
   object-fit: contain;
   background-color: #000;
 }
+.hero-video-mute {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--white);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.hero-video-mute:hover { background: rgba(0, 0, 0, 0.75); }
 .hero-overlay {
   position: absolute;
   inset: 0;

@@ -14,6 +14,18 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+/* Hero video mute toggle */
+const heroVideo = document.getElementById('heroVideo');
+const heroVideoMute = document.getElementById('heroVideoMute');
+if (heroVideo && heroVideoMute) {
+  heroVideoMute.addEventListener('click', () => {
+    heroVideo.muted = !heroVideo.muted;
+    const icon = heroVideoMute.querySelector('i');
+    icon.className = heroVideo.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
+    heroVideoMute.setAttribute('aria-label', heroVideo.muted ? 'Unmute video' : 'Mute video');
+  });
+}
+
 /* Hero slideshow: each photo fades in clear, holds, then blurs out as the next one appears */
 const heroSlides = document.querySelectorAll('.hero-slide');
 if (heroSlides.length) {
