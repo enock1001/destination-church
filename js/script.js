@@ -14,33 +14,33 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* Hero slideshow: each photo drops in from the top, then the next one drops on top of it */
+/* Hero slideshow: each photo fades in from blurred to clear, then the next one covers it */
 const heroSlides = document.querySelectorAll('.hero-slide');
 if (heroSlides.length) {
   let heroIndex = 0;
   let heroZ = 1;
 
-  const dropInHeroSlide = (slide) => {
+  const revealHeroSlide = (slide) => {
     slide.style.transition = 'none';
-    slide.style.transform = 'translateY(-100%)';
+    slide.style.filter = 'blur(24px)';
     slide.style.opacity = '0';
     void slide.offsetHeight;
-    slide.style.transition = 'transform 2.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease';
+    slide.style.transition = 'filter 2.6s ease, opacity 1.4s ease';
     requestAnimationFrame(() => {
-      slide.style.transform = 'translateY(0)';
+      slide.style.filter = 'blur(0px)';
       slide.style.opacity = '1';
     });
   };
 
   heroSlides[0].style.zIndex = heroZ;
-  dropInHeroSlide(heroSlides[0]);
+  revealHeroSlide(heroSlides[0]);
 
   setInterval(() => {
     heroIndex = (heroIndex + 1) % heroSlides.length;
     const slide = heroSlides[heroIndex];
     heroZ += 1;
     slide.style.zIndex = heroZ;
-    dropInHeroSlide(slide);
+    revealHeroSlide(slide);
   }, 6000);
 }
 
