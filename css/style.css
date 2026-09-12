@@ -498,9 +498,16 @@ button { font-family: inherit; }
 }
 .purpose-card.reveal-slide-lr {
   transform: translate(-220px, -140px);
-  transition: opacity 2s cubic-bezier(0.22, 1, 0.36, 1), transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 3.8s cubic-bezier(0.22, 1, 0.36, 1), transform 3.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .purpose-card.reveal-slide-lr.in-view {
+  transform: translate(0, 0);
+}
+.purpose-card.reveal-slide {
+  transform: translate(220px, -140px);
+  transition: opacity 3.8s cubic-bezier(0.22, 1, 0.36, 1), transform 3.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.purpose-card.reveal-slide.in-view {
   transform: translate(0, 0);
 }
 .new-here-art img {
