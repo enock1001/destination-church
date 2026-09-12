@@ -892,6 +892,11 @@ button { font-family: inherit; }
   transition: clip-path 1.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .ministry-slideshow-wipe .ministry-slide.active { clip-path: inset(0 0 0 0); }
+.ministry-slideshow-rotate .ministry-slide {
+  transform: rotate(-14deg) scale(0.8);
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease;
+}
+.ministry-slideshow-rotate .ministry-slide.active { transform: rotate(0deg) scale(1); }
 @media (max-width: 768px) {
   .ministry-gallery { padding: 34px 16px; }
   .ministry-slideshow { height: 380px; border-radius: 6px; }
