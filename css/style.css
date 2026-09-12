@@ -886,6 +886,12 @@ button { font-family: inherit; }
   92% { opacity: 1; }
   100% { transform: translateX(100%); opacity: 0; }
 }
+.ministry-slideshow-wipe .ministry-slide {
+  opacity: 1;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.ministry-slideshow-wipe .ministry-slide.active { clip-path: inset(0 0 0 0); }
 @media (max-width: 768px) {
   .ministry-gallery { padding: 34px 16px; }
   .ministry-slideshow { height: 380px; border-radius: 6px; }
