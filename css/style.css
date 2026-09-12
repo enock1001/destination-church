@@ -235,8 +235,8 @@ button { font-family: inherit; }
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  font-size: 4.4rem;
-  line-height: 1.05;
+  font-size: 5.6rem;
+  line-height: 1;
   max-width: 620px;
 }
 .hero h1 span { display: block; }
@@ -1399,6 +1399,7 @@ button { font-family: inherit; }
   .hero-content { flex-direction: column; align-items: flex-start; height: auto; gap: 20px; }
   .hero-cta { align-items: flex-start; text-align: left; }
   .hero h1 { display: block; height: auto; font-size: 2.1rem; }
+  .hero h1 span { display: inline; }
   .hero-sub { font-size: 2.1rem; margin: 14px 0 24px; }
   .services-grid { grid-template-columns: 1fr; }
   .ministry-grid { grid-template-columns: 1fr; }
