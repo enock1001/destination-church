@@ -211,7 +211,7 @@ button { font-family: inherit; }
 .hero-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
