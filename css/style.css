@@ -839,6 +839,17 @@ button { font-family: inherit; }
 .ministry-slideshow-converge .ministry-slide:nth-child(odd) { transform: translateX(-100%); }
 .ministry-slideshow-converge .ministry-slide:nth-child(even) { transform: translateX(100%); }
 .ministry-slideshow-converge .ministry-slide.active { transform: translateX(0); }
+.ministry-slideshow-zoom .ministry-slide {
+  transition: opacity 1.5s ease;
+  transform-origin: center center;
+}
+.ministry-slideshow-zoom .ministry-slide.active {
+  animation: ministry-zoom 3.6s ease-in-out infinite alternate;
+}
+@keyframes ministry-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
 @media (max-width: 768px) {
   .ministry-gallery { padding: 34px 16px; }
   .ministry-slideshow { height: 380px; border-radius: 6px; }
