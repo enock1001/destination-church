@@ -263,7 +263,11 @@ button { font-family: inherit; }
   align-items: flex-end;
   padding-bottom: 50px;
 }
-.about-hero h1 { color: var(--white); font-size: 3.2rem; }
+.about-hero h1 {
+  color: var(--white);
+  font-size: 3.2rem;
+  animation: dropIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 .why-exist {
   background: var(--white);
   padding: 70px 0 0;
@@ -276,6 +280,14 @@ button { font-family: inherit; }
   margin: -110px auto 0;
   position: relative;
   z-index: 2;
+  animation: dropIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-hero h1, .why-exist-box { animation: none; }
 }
 .why-exist-box .eyebrow { color: var(--gold); }
 .why-exist-box h2 { font-size: 2rem; margin-top: 16px; line-height: 1.3; }
