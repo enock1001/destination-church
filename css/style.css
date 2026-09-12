@@ -223,9 +223,11 @@ button { font-family: inherit; }
 }
 .hero-cta { text-align: right; }
 .hero-sub {
-  font-size: 1.3rem;
+  font-size: 3.2rem;
+  line-height: 1.1;
   font-weight: 600;
   color: #eee;
+  max-width: 620px;
   margin: 0 0 24px;
 }
 
@@ -1335,6 +1337,7 @@ button { font-family: inherit; }
 /* Responsive */
 @media (max-width: 992px) {
   .hero h1 { font-size: 3rem; }
+  .hero-sub { font-size: 3rem; }
   .about-hero { height: 340px; }
   .about-hero h1 { font-size: 2.4rem; }
   .why-exist-box { padding: 40px 30px; margin-top: -70px; }
@@ -1376,7 +1379,7 @@ button { font-family: inherit; }
   .hero-content { flex-direction: column; align-items: flex-start; gap: 20px; }
   .hero-cta { text-align: left; }
   .hero h1 { font-size: 2.1rem; }
-  .hero-sub { font-size: 1.05rem; margin: 14px 0 24px; }
+  .hero-sub { font-size: 2.1rem; margin: 14px 0 24px; }
   .services-grid { grid-template-columns: 1fr; }
   .ministry-grid { grid-template-columns: 1fr; }
   .new-here-list { grid-template-columns: 1fr; }
