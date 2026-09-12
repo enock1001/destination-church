@@ -28,14 +28,18 @@ if (revealEls.length) {
   revealEls.forEach(el => revealObserver.observe(el));
 }
 
-/* Ministry photo gallery: crossfade slideshow */
+/* Ministry photo gallery: crossfade / rise-up slideshow */
 const ministrySlides = document.querySelectorAll('.ministry-slide');
 if (ministrySlides.length) {
   let ministryIndex = 0;
+  let ministryZ = 1;
+  ministrySlides[0].style.zIndex = ministryZ;
   ministrySlides[0].classList.add('active');
   setInterval(() => {
     ministrySlides[ministryIndex].classList.remove('active');
     ministryIndex = (ministryIndex + 1) % ministrySlides.length;
+    ministryZ += 1;
+    ministrySlides[ministryIndex].style.zIndex = ministryZ;
     ministrySlides[ministryIndex].classList.add('active');
   }, 4000);
 }
