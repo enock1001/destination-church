@@ -27,3 +27,15 @@ if (revealEls.length) {
   }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
   revealEls.forEach(el => revealObserver.observe(el));
 }
+
+/* Ministry photo gallery: crossfade slideshow */
+const ministrySlides = document.querySelectorAll('.ministry-slide');
+if (ministrySlides.length) {
+  let ministryIndex = 0;
+  ministrySlides[0].classList.add('active');
+  setInterval(() => {
+    ministrySlides[ministryIndex].classList.remove('active');
+    ministryIndex = (ministryIndex + 1) % ministrySlides.length;
+    ministrySlides[ministryIndex].classList.add('active');
+  }, 4000);
+}

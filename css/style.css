@@ -808,6 +808,30 @@ button { font-family: inherit; }
 }
 .ministry-nav .next { text-align: right; align-items: flex-end; margin-left: auto; }
 
+.ministry-gallery { background: #000; padding: 50px 24px; }
+.ministry-slideshow {
+  position: relative;
+  max-width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ministry-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2.5s ease;
+}
+.ministry-slide.active { opacity: 1; }
+@media (max-width: 768px) {
+  .ministry-gallery { padding: 34px 16px; }
+  .ministry-slideshow { height: 380px; border-radius: 6px; }
+}
+
 /* Annual Programs */
 .programs-intro {
   max-width: 700px;
