@@ -122,7 +122,9 @@ if (prayerForm) {
 
       const type = btn.dataset.type === 'testimony' ? 'Testimony' : 'Prayer Request';
       const text = `Hello Destination Church,\n\nType: ${type}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
-      window.open(`sms:${PRAYER_SMS_NUMBER}?body=${encodeURIComponent(text)}`, '_blank');
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const separator = isIOS ? '&' : '?';
+      window.open(`sms:${PRAYER_SMS_NUMBER}${separator}body=${encodeURIComponent(text)}`, '_blank');
     });
   });
 }
