@@ -207,6 +207,7 @@ button { font-family: inherit; }
   padding: 60px 0;
   color: var(--white);
 }
+.hero-media > .container { margin: 0; }
 .hero-content { max-width: 620px; }
 .hero h1 {
   font-size: 3.2rem;
