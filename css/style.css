@@ -854,6 +854,12 @@ button { font-family: inherit; }
   from { transform: scale(1); }
   to { transform: scale(1.15); }
 }
+.ministry-slideshow-diagonal .ministry-slide {
+  transition: transform 2.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease;
+}
+.ministry-slideshow-diagonal .ministry-slide:nth-child(odd) { transform: translate(-60%, -60%); }
+.ministry-slideshow-diagonal .ministry-slide:nth-child(even) { transform: translate(60%, -60%); }
+.ministry-slideshow-diagonal .ministry-slide.active { transform: translate(0, 0); }
 @media (max-width: 768px) {
   .ministry-gallery { padding: 34px 16px; }
   .ministry-slideshow { height: 380px; border-radius: 6px; }
