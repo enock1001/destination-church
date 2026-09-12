@@ -213,6 +213,12 @@ button { font-family: inherit; }
   opacity: 0;
   filter: blur(0px);
 }
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
