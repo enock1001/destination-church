@@ -14,33 +14,41 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* Hero slideshow: each photo fades in from blurred to clear, then the next one covers it */
+/* Hero slideshow: each photo fades in clear, holds, then blurs out as the next one appears */
 const heroSlides = document.querySelectorAll('.hero-slide');
 if (heroSlides.length) {
   let heroIndex = 0;
   let heroZ = 1;
 
-  const revealHeroSlide = (slide) => {
+  const clearInHeroSlide = (slide) => {
     slide.style.transition = 'none';
-    slide.style.filter = 'blur(24px)';
+    slide.style.filter = 'blur(0px)';
     slide.style.opacity = '0';
     void slide.offsetHeight;
-    slide.style.transition = 'filter 2.6s ease, opacity 1.4s ease';
+    slide.style.transition = 'opacity 1.4s ease';
     requestAnimationFrame(() => {
-      slide.style.filter = 'blur(0px)';
       slide.style.opacity = '1';
     });
   };
 
+  const blurOutHeroSlide = (slide) => {
+    slide.style.transition = 'filter 1.2s ease';
+    slide.style.filter = 'blur(24px)';
+  };
+
   heroSlides[0].style.zIndex = heroZ;
-  revealHeroSlide(heroSlides[0]);
+  clearInHeroSlide(heroSlides[0]);
 
   setInterval(() => {
-    heroIndex = (heroIndex + 1) % heroSlides.length;
-    const slide = heroSlides[heroIndex];
-    heroZ += 1;
-    slide.style.zIndex = heroZ;
-    revealHeroSlide(slide);
+    const current = heroSlides[heroIndex];
+    blurOutHeroSlide(current);
+    setTimeout(() => {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      const next = heroSlides[heroIndex];
+      heroZ += 1;
+      next.style.zIndex = heroZ;
+      clearInHeroSlide(next);
+    }, 900);
   }, 6000);
 }
 

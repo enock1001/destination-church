@@ -211,7 +211,7 @@ button { font-family: inherit; }
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  filter: blur(24px);
+  filter: blur(0px);
 }
 .hero-overlay {
   position: absolute;
