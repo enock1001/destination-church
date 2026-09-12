@@ -14,6 +14,36 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+/* Hero slideshow: each photo drops in from the top, then the next one drops on top of it */
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length) {
+  let heroIndex = 0;
+  let heroZ = 1;
+
+  const dropInHeroSlide = (slide) => {
+    slide.style.transition = 'none';
+    slide.style.transform = 'translateY(-100%)';
+    slide.style.opacity = '0';
+    void slide.offsetHeight;
+    slide.style.transition = 'transform 2.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease';
+    requestAnimationFrame(() => {
+      slide.style.transform = 'translateY(0)';
+      slide.style.opacity = '1';
+    });
+  };
+
+  heroSlides[0].style.zIndex = heroZ;
+  dropInHeroSlide(heroSlides[0]);
+
+  setInterval(() => {
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    const slide = heroSlides[heroIndex];
+    heroZ += 1;
+    slide.style.zIndex = heroZ;
+    dropInHeroSlide(slide);
+  }, 6000);
+}
+
 /* Slide-in reveal when scrolled into view */
 const revealEls = document.querySelectorAll('.reveal-slide, .reveal-fade-up, .reveal-slide-lr');
 if (revealEls.length) {
