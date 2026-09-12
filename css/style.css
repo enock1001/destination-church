@@ -860,6 +860,22 @@ button { font-family: inherit; }
 .ministry-slideshow-diagonal .ministry-slide:nth-child(odd) { transform: translate(-60%, -60%); }
 .ministry-slideshow-diagonal .ministry-slide:nth-child(even) { transform: translate(60%, -60%); }
 .ministry-slideshow-diagonal .ministry-slide.active { transform: translate(0, 0); }
+.ministry-slideshow-particles .ministry-slide.active {
+  animation: ministry-zoom 4.5s ease-in-out infinite alternate;
+}
+.particle-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+.particle-tile {
+  position: absolute;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg);
+  will-change: transform, opacity;
+}
 @media (max-width: 768px) {
   .ministry-gallery { padding: 34px 16px; }
   .ministry-slideshow { height: 380px; border-radius: 6px; }
