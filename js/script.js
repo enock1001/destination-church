@@ -103,8 +103,8 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* Prayer / Testimony form -> WhatsApp */
-const WHATSAPP_NUMBER = '233244254607';
+/* Prayer / Testimony form -> text message */
+const PRAYER_SMS_NUMBER = '+12812233897';
 const prayerForm = document.getElementById('prayerForm');
 
 if (prayerForm) {
@@ -122,7 +122,7 @@ if (prayerForm) {
 
       const type = btn.dataset.type === 'testimony' ? 'Testimony' : 'Prayer Request';
       const text = `Hello Destination Church,\n\nType: ${type}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+      window.open(`sms:${PRAYER_SMS_NUMBER}?body=${encodeURIComponent(text)}`, '_blank');
     });
   });
 }
