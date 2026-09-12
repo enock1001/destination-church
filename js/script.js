@@ -29,7 +29,10 @@ if (revealEls.length) {
 }
 
 const navLinks = document.querySelectorAll('.nav a');
-const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+const sections = Array.from(navLinks)
+  .filter(link => link.getAttribute('href').startsWith('#'))
+  .map(link => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
 
 window.addEventListener('scroll', () => {
   let current = sections[0];
