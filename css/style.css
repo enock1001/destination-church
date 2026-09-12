@@ -238,11 +238,11 @@ button { font-family: inherit; }
 .hero-cta { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
 .hero-cta .btn { align-self: center; }
 .hero-sub {
-  font-size: 3.2rem;
-  line-height: 1.1;
+  font-size: 2.6rem;
+  line-height: 1.25;
   font-weight: 600;
   color: #eee;
-  max-width: 620px;
+  max-width: 360px;
   margin: 0 0 24px;
 }
 
@@ -1353,17 +1353,17 @@ button { font-family: inherit; }
 @media (max-width: 1700px) {
   .hero-media { min-height: 460px; }
   .hero h1 { font-size: 1.7rem; max-width: 200px; }
-  .hero-sub { font-size: 1.7rem; max-width: 220px; }
+  .hero-sub { font-size: 1.7rem; max-width: 240px; }
 }
 @media (max-width: 1300px) {
   .hero-media { min-height: 340px; }
   .hero h1 { font-size: 1.4rem; max-width: 170px; }
-  .hero-sub { font-size: 1.4rem; max-width: 180px; }
+  .hero-sub { font-size: 1.4rem; max-width: 200px; }
 }
 @media (max-width: 992px) {
   .hero-media { min-height: 280px; }
   .hero h1 { font-size: 1.1rem; max-width: 115px; }
-  .hero-sub { font-size: 1.1rem; max-width: 120px; }
+  .hero-sub { font-size: 1.1rem; max-width: 160px; }
   .about-hero { height: 340px; }
   .about-hero h1 { font-size: 2.4rem; }
   .why-exist-box { padding: 40px 30px; margin-top: -70px; }
