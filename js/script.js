@@ -96,7 +96,7 @@ window.addEventListener('scroll', () => {
 });
 
 /* Prayer / Testimony form -> WhatsApp and text message */
-const PRAYER_NUMBER = '233244254607';
+const PRAYER_NUMBER = '233543503388';
 const prayerForm = document.getElementById('prayerForm');
 
 if (prayerForm) {
