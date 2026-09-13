@@ -14,53 +14,33 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* Hero video mute toggle */
-const heroVideo = document.getElementById('heroVideo');
-const heroVideoMute = document.getElementById('heroVideoMute');
-if (heroVideo && heroVideoMute) {
-  heroVideoMute.addEventListener('click', () => {
-    heroVideo.muted = !heroVideo.muted;
-    const icon = heroVideoMute.querySelector('i');
-    icon.className = heroVideo.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
-    heroVideoMute.setAttribute('aria-label', heroVideo.muted ? 'Unmute video' : 'Mute video');
-  });
-}
-
-/* Hero slideshow: each photo fades in clear, holds, then blurs out as the next one appears */
+/* Hero slideshow: each photo drops in from the top, then the next one drops on top of it */
 const heroSlides = document.querySelectorAll('.hero-slide');
 if (heroSlides.length) {
   let heroIndex = 0;
   let heroZ = 1;
 
-  const clearInHeroSlide = (slide) => {
+  const dropInHeroSlide = (slide) => {
     slide.style.transition = 'none';
-    slide.style.filter = 'blur(0px)';
+    slide.style.transform = 'translateY(-100%)';
     slide.style.opacity = '0';
     void slide.offsetHeight;
-    slide.style.transition = 'opacity 1.4s ease';
+    slide.style.transition = 'transform 2.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease';
     requestAnimationFrame(() => {
+      slide.style.transform = 'translateY(0)';
       slide.style.opacity = '1';
     });
   };
 
-  const blurOutHeroSlide = (slide) => {
-    slide.style.transition = 'filter 1.2s ease';
-    slide.style.filter = 'blur(24px)';
-  };
-
   heroSlides[0].style.zIndex = heroZ;
-  clearInHeroSlide(heroSlides[0]);
+  dropInHeroSlide(heroSlides[0]);
 
   setInterval(() => {
-    const current = heroSlides[heroIndex];
-    blurOutHeroSlide(current);
-    setTimeout(() => {
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      const next = heroSlides[heroIndex];
-      heroZ += 1;
-      next.style.zIndex = heroZ;
-      clearInHeroSlide(next);
-    }, 900);
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    const slide = heroSlides[heroIndex];
+    heroZ += 1;
+    slide.style.zIndex = heroZ;
+    dropInHeroSlide(slide);
   }, 6000);
 }
 
